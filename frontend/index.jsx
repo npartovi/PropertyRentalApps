@@ -7,9 +7,9 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	window.login = login
-	window.signup = signup
-	window.logout = logout
+	window.login = login;
+	window.signup = signup;
+	window.logout = logout;
 
 	let store;
 
@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	} else {
 	  store = configureStore();
 	}
+
+	console.log(store)
 
 
   const root = document.getElementById('root');
