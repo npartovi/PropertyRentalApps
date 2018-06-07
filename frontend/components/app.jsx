@@ -1,21 +1,14 @@
 import React from 'react';
 import {Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_api_util';
-import NavbarContainer from './navbar/navbarcontainer';
+import LoginFormContainer from './loginform/login_form_container';
 
 const App = () => (
 
 	<div>
-		<header>
-			<NavbarContainer />
-		</header>
-
 		<Switch>
-			
+			<AuthRoute path="/login" component={LoginFormContainer} />
 		</Switch>
-
-
-
 	</div>
 
 )
