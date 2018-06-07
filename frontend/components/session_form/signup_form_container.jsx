@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch) => ({
 	
 });
 
-export default connect(null, null)(SessionForm)
+export default connect(mapStateToProps, mapDispatchToProps)(SessionForm)

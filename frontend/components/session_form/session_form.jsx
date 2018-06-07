@@ -6,7 +6,7 @@ class SessionForm extends React.Component {
 	}
 
 	render(){
-		console.log(this.props)
+		console.log(this.props.formType)
 		return(
 			<div>
 				<p>{this.props.formType}</p>
