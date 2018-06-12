@@ -39,10 +39,9 @@ class SessionForm extends React.Component {
 
 	render(){
 		return(
-			<div>
+			<div className="session-form-container">
 				<p>{this.props.formType}</p>
-				<h1>This is a form</h1>
-				<form onSubmit={this.handleSubmit}>
+				<form className="session-form" onSubmit={this.handleSubmit}>
 					{this.renderSignupInput()}
 					<label>Username
 						<input type="text" 
@@ -52,7 +51,7 @@ class SessionForm extends React.Component {
 
 
 					<label>Password
-						<input type="text" 
+						<input type="password" 
 							onChange={this.updateField('password')}/>
 					</label>
 

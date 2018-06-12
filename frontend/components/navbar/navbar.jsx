@@ -7,7 +7,9 @@ class Navbar extends React.Component {
 
 	render(){
 		return(
-			<button onClick={this.props.logout}>Logout</button>
+			<nav>
+				<button onClick={this.props.logout}>Logout</button>
+			</nav>
 		)
 	}
 }

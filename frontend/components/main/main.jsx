@@ -1,19 +1,9 @@
 import React from 'react';
 import NavBarContainer from '../navbar/navbar_container';
 
+const Main = () => (
 
-class Main extends React.Component {
-	constructor(props){
-		super(props)
-	}
-
-	render(){
-		return (
-			<main className="main">
-				<NavBarContainer />
-			</main>
-		)
-	}
-}
+	<NavBarContainer />
+)
 
 export default Main
