@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-const Main = () => {
+class Main extends React.Component {
+	constructor(props){
+		super(props)
+	}
 
-	return (
-		<main className="main">
-			<h1>This is a page?</h1>
-		</main>
-	)
+	render(){
+		console.log(this.props.test)
+		return (
+			<main className="main">
+				<h1>This is a page?</h1>
+				<button onClick={this.props.logout}>Logout</button>
+			</main>
+		)
+	}
 }
 
 export default Main

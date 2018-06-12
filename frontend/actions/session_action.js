@@ -16,7 +16,7 @@ export const login = (user) => (dispatch) => (
 
 );
 
-export const logout = (logout) => (dispatch) => (
+export const logout = () => (dispatch) => (
 	UserApiUtil.logout()
 		.then(() => dispatch(receiveCurrentUser(null)))
 );

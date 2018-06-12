@@ -3,7 +3,7 @@ import {Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_api_util';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import MainContainer from './main/main';
+import MainContainer from './main/main_container';
 
 const App = () => (
 

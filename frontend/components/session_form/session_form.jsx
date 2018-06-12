@@ -38,8 +38,6 @@ class SessionForm extends React.Component {
 	}
 
 	render(){
-
-		console.log(this.state)
 		return(
 			<div>
 				<p>{this.props.formType}</p>
