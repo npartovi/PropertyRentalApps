@@ -6,8 +6,11 @@ class User < ApplicationRecord
 
 	after_initialize :ensure_session_token
 
-	attr_reader :password
+	has_many :address,
+		class_name: 'Address',
+		foreign_key: :user_id
 
+	attr_reader :password
 
 	def password=(password)
 		@password = password

@@ -5,12 +5,16 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import Main from './main/main';
 
+
+import AddressFormNewContainer from './address_form/address_form_new_container';
+
 const App = () => (
 
 	<div>
 		<Switch>
 			<AuthRoute exact path="/login" component={LoginFormContainer} />
 			<AuthRoute exact path="/signup" component={SignupFormContainer} />
+			<ProtectedRoute path="/addresses/new" component={AddressFormNewContainer} />
 			<ProtectedRoute path="/" component={Main} />			
 		</Switch>
 	</div>
