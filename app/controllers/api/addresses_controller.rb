@@ -1,7 +1,11 @@
 class Api::AddressesController < ApplicationController
 
 	def index
-		@addresses = Address.
+		@addresses = Address.all
+	end
+
+	def show
+		@address = Address.find(params[:id])
 	end
 
 	def create
@@ -22,13 +26,6 @@ class Api::AddressesController < ApplicationController
 		@address = Address.find(params[:id])
 		@address.destroy!
 		render :index
-	end
-
-	def show
-		@address = Address.find(params[:id])
-	end
-
-	def edit
 	end
 
 	def address_params
