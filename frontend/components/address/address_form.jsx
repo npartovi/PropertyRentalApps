@@ -5,6 +5,7 @@ class AddressForm extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = this.props.address
+		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 
@@ -14,11 +15,15 @@ class AddressForm extends React.Component {
 		}
 	}
 
+	handleSubmit(e){
+		e.preventDefault()
+		this.props.action(this.state).then(this.props.history.push('/'));
+	}
+
 	render(){
-		console.log(this.state)
 		return (
 			<div className="form-container">
-				<form>
+				<form onSubmit={this.handleSubmit}>
 					<label>Street
 						<input
 							type="text"
@@ -47,7 +52,7 @@ class AddressForm extends React.Component {
 						<input 
 							type="text"
 							value={this.state.zipcode}
-							onChange={this.updateField("zipcode")}
+							onChange={this.updateField("zip_code")}
 						/>
 					</label>
 

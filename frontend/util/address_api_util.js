@@ -1,11 +1,11 @@
-export const fetchAddresses = () => dispatch => (
+export const fetchAddresses = () =>  (
     $.ajax({
         url: '/api/addresses',
         method: 'GET'
     })
 );
 
-export const fetchAddress = (id) => dispatch => (
+export const fetchAddress = (id) =>  (
     $.ajax({
         url: `/api/addresses/${id}`,
         method: 'GET',
@@ -13,7 +13,7 @@ export const fetchAddress = (id) => dispatch => (
     })
 );
 
-export const createAddress = (address) => dispatch => (
+export const createAddress = (address) =>  (
     $.ajax({
         url: '/api/addresses',
         method: 'POST',
@@ -21,7 +21,7 @@ export const createAddress = (address) => dispatch => (
     })
 );
 
-export const updateAddress = (address) => dispatch => (
+export const updateAddress = (address) => (
     $.ajax({
         url: `/api/addresses/${address.id}`,
         method: "PATCH",
@@ -29,7 +29,7 @@ export const updateAddress = (address) => dispatch => (
     })
 );
 
-export const deleteAddress = (id) => dispatch => (
+export const deleteAddress = (id) => (
     $.ajax({
         url: `/api/addresses/${id}`,
         method: 'DELETE'

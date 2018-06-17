@@ -25,7 +25,7 @@ export const updateAddress = (address) => dispatch => (
         .then(address => dispatch(receiveAddress(address)))
 )
 
-export const removeAddress = (addressId) => dispatch => (
+export const deleteAddress = (addressId) => dispatch => (
     AddressApitUtil.deleteAddress(addressId)
         .then(address => dispatch(removeAddress(addressId)))
 )

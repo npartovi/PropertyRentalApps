@@ -10,7 +10,6 @@ class Api::AddressesController < ApplicationController
 	end
 
 	def create
-		debugger
 		@address = Address.new(address_params)
 		@address.user_id = current_user.id
 
@@ -22,6 +21,13 @@ class Api::AddressesController < ApplicationController
 	end
 
 	def update
+		@address = Address.find(params[:id])
+
+		if @address.update(address_params)
+			render :show
+		else
+			render json: @address.errors.full_messages, status: 422
+		end
 	end
 
 	def destroy
