@@ -1,4 +1,5 @@
 import React from 'react';
+import AddressIndexItem from './address_index_item';
 
 class AddressShow extends React.Component {
     constructor(props){
@@ -13,7 +14,9 @@ class AddressShow extends React.Component {
         console.log(this.props.address)
         return(
             <div>
-                
+                <AddressIndexItem
+                    address={this.props.address}
+                />
             </div>
         )
     }

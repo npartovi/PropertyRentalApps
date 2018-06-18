@@ -15,10 +15,7 @@ class AddressIndex extends React.Component{
         return this.props.addresses.map((address, idx) => {
             return (
                 <AddressIndexItem
-                    state={address.state}
-                    street={address.street}
-                    city={address.city}
-                    id={address.id}
+                    address={address}
                     key={idx}
                 />
             )
