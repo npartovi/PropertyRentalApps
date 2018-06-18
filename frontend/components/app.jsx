@@ -8,6 +8,7 @@ import Main from './main/main';
 
 import AddressFormNewContainer from './address/address_form_new_container';
 import AddressFormEditContainer from './address/address_form_edit_container';
+import AddressShowContainer from './address/address_show_container';
 
 const App = () => (
 
@@ -16,6 +17,7 @@ const App = () => (
 			<AuthRoute exact path="/login" component={LoginFormContainer} />
 			<AuthRoute exact path="/signup" component={SignupFormContainer} />
 			<ProtectedRoute path="/addresses/:id/edit" component={AddressFormEditContainer} />
+			<ProtectedRoute path="/addresses/:id" component={AddressShowContainer}/>
 			<ProtectedRoute path="/addresses/new" component={AddressFormNewContainer} />
 			<ProtectedRoute path="/" component={Main} />			
 		</Switch>

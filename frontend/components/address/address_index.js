@@ -18,6 +18,7 @@ class AddressIndex extends React.Component{
                     state={address.state}
                     street={address.street}
                     city={address.city}
+                    id={address.id}
                     key={idx}
                 />
             )
