@@ -10,6 +10,7 @@ class Api::AddressesController < ApplicationController
 	end
 
 	def create
+		debugger
 		@address = Address.new(address_params)
 		@address.user_id = current_user.id
 
@@ -37,7 +38,7 @@ class Api::AddressesController < ApplicationController
 	end
 
 	def address_params
-		params.require(:address).permit(:street ,:city,:state, :zip_code)
+		params.require(:address).permit(:street ,:city,:state, :zip_code, :suite, :tenant_first_name, :tenant_last_name)
 	end
 
 end

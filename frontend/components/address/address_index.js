@@ -1,5 +1,6 @@
 import React from 'react';
 import AddressIndexItem from './address_index_item';
+import { Link } from 'react-router-dom';
 
 
 class AddressIndex extends React.Component{
@@ -14,10 +15,12 @@ class AddressIndex extends React.Component{
     renderIndexList(){
         return this.props.addresses.map((address, idx) => {
             return (
-                <AddressIndexItem
-                    address={address}
-                    key={idx}
-                />
+                <div key={idx}>
+                    <AddressIndexItem
+                        address={address}
+                    />
+                    <Link to={`addresses/${address.id}`}>show</Link>
+                </div>
             )
         })
     }
