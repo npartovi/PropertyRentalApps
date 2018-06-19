@@ -1,14 +1,20 @@
 import React from 'react';
 import AddressIndexItem from './address_index_item';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class AddressShow extends React.Component {
     constructor(props){
         super(props)
+        this.handleDeleteAddress = this.handleDeleteAddress.bind(this)
     }
 
     componentDidMount(){
         this.props.fetchAddress(this.props.match.params.id)
+    }
+
+    handleDeleteAddress(){
+        this.props.deleteAddress(this.props.address.id)
+            .then(() => this.props.history.push('/'));
     }
 
     render(){
@@ -18,6 +24,8 @@ class AddressShow extends React.Component {
         return(
             <div>
                 <Link to="/">Home</Link>
+                <Link to={`addresses/${this.props.address.id}/edit`}>edit</Link>
+                <button onClick={this.handleDeleteAddress}>Delete</button>
                 <AddressIndexItem
                     address={this.props.address}
                 />
@@ -26,4 +34,4 @@ class AddressShow extends React.Component {
     }
 }
 
-export default AddressShow
+export default withRouter(AddressShow)

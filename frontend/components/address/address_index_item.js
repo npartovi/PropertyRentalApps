@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddressIndexItem = ({ address}) => (
+const AddressIndexItem = ({ address }) => (
 
     <ul>
         <li>{address.state}</li>
