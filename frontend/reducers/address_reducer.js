@@ -8,6 +8,11 @@ const addressReducer = (oldState = {}, action) => {
             return merge({}, action.addresses)
         case RECEIVE_ADDRESS:
             return merge({}, oldState, {[action.address.id]: action.address})
+        case REMOVE_ADDRESS:
+            debugger
+            let newState = merge({}, oldState)
+            delete newState[action.addressId]
+            return newState
         default:
             return oldState
     }

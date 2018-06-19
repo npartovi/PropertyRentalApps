@@ -12,7 +12,8 @@ class AddressShow extends React.Component {
         this.props.fetchAddress(this.props.match.params.id)
     }
 
-    handleDeleteAddress(){
+    handleDeleteAddress(e){
+        e.preventDefault()
         this.props.deleteAddress(this.props.address.id)
             .then(() => this.props.history.push('/'));
     }
@@ -24,7 +25,7 @@ class AddressShow extends React.Component {
         return(
             <div>
                 <Link to="/">Home</Link>
-                <Link to={`addresses/${this.props.address.id}/edit`}>edit</Link>
+                <Link to={`/addresses/${this.props.address.id}/edit`}>edit</Link>
                 <button onClick={this.handleDeleteAddress}>Delete</button>
                 <AddressIndexItem
                     address={this.props.address}
