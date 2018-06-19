@@ -11,7 +11,6 @@ const AddressIndexItem = ({ address}) => (
         <li>{address.suite}</li>
         <li>{address.tenant_first_name}</li>
         <li>{address.tenant_last_name}</li>
-        <li>{address.id}</li>
         <li><Link to={`/addresses/${address.id}`}>show</Link></li>
     </ul>
 
