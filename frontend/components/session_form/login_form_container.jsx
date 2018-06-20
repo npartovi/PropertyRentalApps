@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const mapStateToProps = (state) => ({
 	formType: 'Login',
-	navLink: <Link to="/signup">Sign Up</Link>
+	navLink: <Link className="session-link" to="/signup">Dont have an account? Get Started</Link>
 
 });
 
