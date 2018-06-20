@@ -50,8 +50,8 @@ class SessionForm extends React.Component {
 									onChange={this.updateField('password')}
 									placeholder="Password"
 									/>
-							</form>
 							<button className="session-button" type="submit">{this.props.formType}</button>
+							</form>
 					</div>
 					<div className="session-link-container">
 						{this.props.navLink}
