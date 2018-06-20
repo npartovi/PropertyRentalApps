@@ -27,7 +27,7 @@ export const updateAddress = (address) => dispatch => (
 
 export const deleteAddress = (addressId) => dispatch => (
     AddressApitUtil.deleteAddress(addressId)
-        .then(address => dispatch(removeAddress(addressId)))
+        .then(address => dispatch(removeAddress(address.id)))
 )
 
 const receiveAllAddress = (addresses) => ({

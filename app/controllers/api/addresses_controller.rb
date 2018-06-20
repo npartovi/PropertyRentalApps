@@ -33,7 +33,7 @@ class Api::AddressesController < ApplicationController
 	def destroy
 		@address = Address.find(params[:id])
 		@address.destroy!
-		render :index
+		render :show
 	end
 
 	def address_params

@@ -15,7 +15,7 @@ class AddressIndex extends React.Component{
     renderIndexList(){
         return this.props.addresses.map((address, idx) => {
             return (
-                <div key={idx}>
+                <div className="address-index-item-wrapper" key={idx}>
                     <AddressIndexItem
                         address={address}
                     />
@@ -27,8 +27,7 @@ class AddressIndex extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1>This is the index listings</h1>
+            <div className="address-index-container">
                 {this.renderIndexList()}
             </div>
         )

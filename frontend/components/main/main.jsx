@@ -4,9 +4,9 @@ import AddressIndexContainer from '../address/address_index_container';
 
 const Main = () => (
 
-	<div>
-	<NavBarContainer />
-	<AddressIndexContainer />
+	<div className="main-index-container">
+		<NavBarContainer />
+		<AddressIndexContainer />
 	</div>
 
 )

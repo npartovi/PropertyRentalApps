@@ -8,7 +8,7 @@ class Navbar extends React.Component {
 
 	render(){
 		return(
-			<nav>
+			<nav className="address-index-navbar">
 				<button onClick={this.props.logout}>Logout</button>
 				<Link to={'/addresses/new'}>Add Address</Link>
 			</nav>
