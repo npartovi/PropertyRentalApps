@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     height: 400px;
-    background:yellow;
+    background: #3D96F3;
     height: 100vh;
     width: 100vw;
 }
@@ -11,12 +11,15 @@
 .session-form-wrapper{
     grid-row: 2/3;
     grid-column:2/3;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 2px 3px 1px #5a5757;
+    background: white;
+    border-radius: 5px
     
 }
 
-.session-form-inner {
-    grid-column: 2/3;
-    text-align: center;
-}
+// .session-form-inner {
+//     grid-column: 2/3;
+//     text-align: center;
+// }
