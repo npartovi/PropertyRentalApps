@@ -38,7 +38,6 @@ class SessionForm extends React.Component {
 
 	render(){
 		return(
-			<div className="test">
 				<div className="session-form-container">
 					<div className="session-form-wrapper">
 							<form className="session-form" onSubmit={this.handleSubmit}>
@@ -54,15 +53,12 @@ class SessionForm extends React.Component {
 							</form>
 							<button className="session-button" type="submit">{this.props.formType}</button>
 					</div>
+					<div className="session-link-container">
+						{this.props.navLink}
+					</div>
 				</div>
-				<div className="session-link-container">
-					{this.props.navLink}
-				</div>
-			</div>
-
 		)
 	}
-
 }
 
 export default withRouter(SessionForm)

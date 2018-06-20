@@ -19,9 +19,18 @@ form.session-form input {
     font-size: 14px;
 }
 
-a.session-link {
+a.session-link {    
     text-decoration: none;
-    color: #3D96F3;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.session-link-container {
+    grid-column: 2/3;
+    grid-row: 3/4;
 }
 
 .session-form-wrapper{
