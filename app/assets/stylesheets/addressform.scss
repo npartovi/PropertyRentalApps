@@ -1,0 +1,23 @@
+.address-form-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    
+}
+
+.address-form {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+
+form.address-form input {
+    height: 40px;
+    margin-bottom: 10px;
+}

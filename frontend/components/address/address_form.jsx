@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 
 class AddressForm extends React.Component {
@@ -22,65 +23,54 @@ class AddressForm extends React.Component {
 
 	render(){
 		return (
-			<div className="form-container">
-				<form onSubmit={this.handleSubmit}>
-					<label>Street
+			<div className="address-form-container">
+				<form className="address-form" onSubmit={this.handleSubmit}>
 						<input
 							type="text"
 							value={this.state.street}
 							onChange={this.updateField("street")}
+							value="Street"
 						/>
-					</label>
-
-					<label>City
 						<input 
 							type="text"
 							value={this.state.city}
 							onChange={this.updateField("city")}
+							value="City"
 						/>
-					</label>
-
-					<label>State
 						<input 
 						type="text"
 						value={this.state.state}
 						onChange={this.updateField("state")}
+						value="State"
 						/>
-					</label>
-
-					<label>Zip
 						<input 
 							type="text"
 							value={this.state.zipcode}
 							onChange={this.updateField("zip_code")}
+							value="Zipcode"
 						/>
-					</label>
-
-					<label>Suite
 						<input 
 							type="text"
 							value={this.state.suite}
 							onChange={this.updateField("suite")}
+							value="Suite"
 						/>
-					</label>
-
-					<label>Tenant First Name
 						<input 
 							type="text"
 							value={this.state.tenant_first_name}
 							onChange={this.updateField("tenant_first_name")}
+							value="Tenant First Name"
 						/>
-					</label>
-
-					<label>Tenant Last Name
 						<input 
 							type="text"
 							value={this.state.tenant_last_name}
 							onChange={this.updateField("tenant_last_name")}
+							value="Tenant Last Name"
 						/>
-					</label>
-
-					<input type="submit" />
+					<div className="form-buttons-container">
+						<input className="address-form-submit" type="submit" />
+						<Link className="address-form-cancel" to="/">Cancel</Link>
+					</div>
 				</form>
 			</div>
 		)
