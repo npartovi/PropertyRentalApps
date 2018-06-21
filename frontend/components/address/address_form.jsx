@@ -24,6 +24,9 @@ class AddressForm extends React.Component {
 	render(){
 		return (
 			<div className="address-form-container">
+				<div className="new-address-header">
+					<h1>Add New Address</h1>
+				</div>
 				<form className="address-form" onSubmit={this.handleSubmit}>
 						<input
 							type="text"
@@ -68,8 +71,8 @@ class AddressForm extends React.Component {
 							value="Tenant Last Name"
 						/>
 					<div className="form-buttons-container">
-						<input className="address-form-submit" type="submit" />
-						<Link className="address-form-cancel" to="/">Cancel</Link>
+						<button className="address-form-submit" type="submit" >Submit</button>
+						<button className="address-form-cancel"><Link to="/">Cancel</Link></button>
 					</div>
 				</form>
 			</div>

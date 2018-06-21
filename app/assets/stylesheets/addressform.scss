@@ -15,9 +15,53 @@
     border-radius: 5px;
 }
 
+.form-buttons-container {
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
 
 form.address-form input {
     height: 40px;
     margin-bottom: 10px;
+    padding:0px 10px;
+}
+
+.address-form-submit{
+    background: #3D96F3;
+    color:white;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.address-form-cancel {
+    background: red;
+    color:white;
+    border: none;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 4px;
+    
+}
+
+.address-form-cancel a {
+    text-decoration: none;
+    color: white;
+}
+
+.new-address-header{
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+}
+
+.new-address-header h1 {
+    color: white;
+    font-size: 3em;
 }
