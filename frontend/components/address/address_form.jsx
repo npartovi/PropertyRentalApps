@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
 
 
 class AddressForm extends React.Component {
@@ -22,6 +23,7 @@ class AddressForm extends React.Component {
 	}
 
 	render(){
+		debugger
 		return (
 			<div className="address-form-container">
 				<div className="new-address-header">
@@ -32,43 +34,44 @@ class AddressForm extends React.Component {
 							type="text"
 							value={this.state.street}
 							onChange={this.updateField("street")}
-							value="Street"
+							placeholder="Street"
 						/>
 						<input 
 							type="text"
 							value={this.state.city}
 							onChange={this.updateField("city")}
-							value="City"
-						/>
-						<input 
-						type="text"
-						value={this.state.state}
-						onChange={this.updateField("state")}
-						value="State"
+							placeholder="City"
 						/>
 						<input 
 							type="text"
-							value={this.state.zipcode}
+							value={this.state.state}
+							onChange={this.updateField("state")}
+							placeholder="State"
+						/>
+						<input 
+							type="text"
+							value={this.state.zip_code}
 							onChange={this.updateField("zip_code")}
-							value="Zipcode"
+							placeholder="Zip Code"
+							
 						/>
 						<input 
 							type="text"
 							value={this.state.suite}
 							onChange={this.updateField("suite")}
-							value="Suite"
+							placeholder="Suite"
 						/>
 						<input 
 							type="text"
 							value={this.state.tenant_first_name}
 							onChange={this.updateField("tenant_first_name")}
-							value="Tenant First Name"
+							placeholder="Tenant First Name"
 						/>
 						<input 
 							type="text"
 							value={this.state.tenant_last_name}
 							onChange={this.updateField("tenant_last_name")}
-							value="Tenant Last Name"
+							placeholder="Tenant Last Name"
 						/>
 					<div className="form-buttons-container">
 						<button className="address-form-submit" type="submit" >Submit</button>
@@ -80,4 +83,4 @@ class AddressForm extends React.Component {
 	}
 }
 
-export default AddressForm
+export default withRouter(AddressForm)
