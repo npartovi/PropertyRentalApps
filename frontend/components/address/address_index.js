@@ -19,7 +19,7 @@ class AddressIndex extends React.Component{
                     <AddressIndexItem
                         address={address}
                     />
-                    <Link to={`addresses/${address.id}`}>show</Link>
+                    <Link className="index-show-button" to={`addresses/${address.id}`}>show</Link>
                 </div>
             )
         })

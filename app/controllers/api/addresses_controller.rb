@@ -37,7 +37,7 @@ class Api::AddressesController < ApplicationController
 	end
 
 	def address_params
-		params.require(:address).permit(:street ,:city,:state, :zip_code, :suite, :tenant_first_name, :tenant_last_name)
+		params.require(:address).permit(:street ,:city,:state, :zip_code, :suite, :tenant_first_name, :tenant_last_name, :images [])
 	end
 
 end
