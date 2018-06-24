@@ -2,15 +2,12 @@ import React from 'react';
 
 const AddressIndexItem = ({ address }) => (
 
-    <ul className="address-index-item">
-        <li>State: {address.state}</li>
-        <li>Street: {address.street}</li>
-        <li>City: {address.city}</li>
-        <li>Zipcode: {address.zip_code}</li>
-        <li>Suite: {address.suite}</li>
-        <li>First Name: {address.tenant_first_name}</li>
-        <li>Last Name: {address.tenant_last_name}</li>
-    </ul>
+        <ul className="address-index-item">
+            <li>{address.tenant_first_name} {address.tenant_last_name}</li>
+            <li>{address.street}</li>
+            <li>{address.city},{address.state},{address.zip_code}</li>
+            {address.suite ? <li>Suite: {address.suite}</li> : ""}
+        </ul>
 
 )
 

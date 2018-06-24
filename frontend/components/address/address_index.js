@@ -16,10 +16,14 @@ class AddressIndex extends React.Component{
         return this.props.addresses.map((address, idx) => {
             return (
                 <div className="address-index-item-wrapper" key={idx}>
-                    <AddressIndexItem
-                        address={address}
-                    />
-                    <Link className="index-show-button" to={`addresses/${address.id}`}>show</Link>
+                    <div className="address-index-container">
+                        <AddressIndexItem
+                            address={address}
+                        />
+                    </div>
+                    <div className="address-show-button-container">
+                        <button className="index-show-button"><Link to={`addresses/${address.id}`}>show</Link></button>
+                    </div>
                 </div>
             )
         })

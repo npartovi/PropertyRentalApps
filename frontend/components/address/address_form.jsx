@@ -23,7 +23,7 @@ class AddressForm extends React.Component {
 	}
 
 	render(){
-		debugger
+		console.log(this.state)
 		return (
 			<div className="address-form-container">
 				<div className="new-address-header">

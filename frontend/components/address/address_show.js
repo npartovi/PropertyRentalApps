@@ -14,7 +14,6 @@ class AddressShow extends React.Component {
 
     handleDeleteAddress(e){
         e.preventDefault()
-        debugger
         this.props.deleteAddress(this.props.address.id)
             .then(() => this.props.history.push("/"))
     }
