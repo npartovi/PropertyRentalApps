@@ -9,8 +9,12 @@ class Navbar extends React.Component {
 	render(){
 		return(
 			<nav className="address-index-navbar">
-				<Link to={'/addresses/new'}>Add Address</Link>
-				<button className="logout-button" onClick={this.props.logout}>Logout</button>
+				<div className="add-address-container">
+					<Link to={'/addresses/new'}>Add Address</Link>
+				</div>
+				<div className="button-logout-container">
+					<button className="logout-button" onClick={this.props.logout}>Logout</button>
+				</div>
 			</nav>
 		)
 	}
