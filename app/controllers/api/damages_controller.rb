@@ -14,6 +14,12 @@ class Api::DamagesController < ApplicationController
         end
     end
 
+    def show
+        @damage = Damage.find(params[:id])
+        render :show
+    end
+
+
     private
 
     def damage_params
