@@ -3,6 +3,11 @@ class Api::DamagesController < ApplicationController
     def index
         @damages = Damage.all
     end
+    
+    def show
+        @damage = Damage.find(params[:id])
+        render :show
+    end
 
     def create
         @damage = Damage.new(damage_params)
@@ -14,15 +19,9 @@ class Api::DamagesController < ApplicationController
         end
     end
 
-    def show
-        @damage = Damage.find(params[:id])
-        render :show
-    end
-
-
     private
 
     def damage_params
-        params.require(:damage).permit(:description)
+        params.require(:damage).permit(:description, :address_id)
     end
 end
